@@ -96,3 +96,6 @@ project/plugins/project/
 .bloop/
 project/metals.sbt
 .bsp/
+
+### Uncomment after generate project
+.idea/
