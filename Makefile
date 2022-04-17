@@ -12,6 +12,9 @@ args = `arg="$(filter-out $@,$(MAKECMDGOALS))" && echo $${arg:-${1}}`
 build:
 	scalafmt src/ --debug && sbt scalafix test
 
+run:
+	sbt run
+
 ### Run all tests
 test:
 	docker-compose down && docker-compose build && docker-compose up -d && docker logs -f py-tools
